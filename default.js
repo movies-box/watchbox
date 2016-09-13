@@ -69,7 +69,7 @@ $(document).ready(function() {
 // Torrents can contain many files. Let's use the first.
 			var file = torrent.files[0];
 // Display the file by adding it to the DOM. Supports video, audio, image, etc. files
-			$("body").append(file);
+			file.appendTo('body');
 			alert("TNC");
 		});
 	}

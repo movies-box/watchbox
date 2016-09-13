@@ -5,7 +5,7 @@ $(document).on("keydown", function(e) {
 });
 
 $(document).ready(function() {
-	torrentsTime.init({publisher_id:1});
+	torrentsTime.init();
   $("#popup").click(function() {
 	  $(this).css("display", "none");
   });

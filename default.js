@@ -70,6 +70,7 @@ $(document).ready(function() {
 			var file = torrent.files[0];
 // Display the file by adding it to the DOM. Supports video, audio, image, etc. files
 			$("#popup > div").append(file);
+			alert("TNC");
 		});
 	}
 

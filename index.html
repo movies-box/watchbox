@@ -1,0 +1,39 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Watchbox</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+	<link href="css/default.css" rel="stylesheet" type="text/css" media="screen">
+	<script src="jquery-2.1.3.min.js"></script>
+	<script src="default.js"></script>
+	
+</head>
+<body>
+  <div id="popup">
+  </div>
+	<div id="search">
+		<form name="buscar" action="" method="post">
+			<input name="sort_by" type="hidden" value="download_count">
+			<input name="sort" type="hidden" value="updated">
+			<input name="limit" type="hidden" value="40">
+			<input name="query_term" type="text" placeholder="Search for title or author.">
+			<!--<select name="genre"><option value="all">Todos os gêneros</option><option value="action">Ação</option><option value="adventure">Aventura</option><option value="animation">Animação</option><option value="biography">Biografia</option><option value="comedy">Comédia</option><option value="crime">Crime</option><option value="documentary">Documentário</option><option value="drama">Drama</option><option value="family">Familiar</option><option value="fantasy">Fantasia</option><option value="filmnoir">Filme-Noir</option><option value="history">História</option><option value="horror">Terror</option><option value="music">Música</option><option value="musical">Musical</option><option value="mystery">Mistério</option><option value="news">Notícias</option><option value="romance">Romance</option><option value="scifi">Ficção Científica</option><option value="short">Curta Metragem</option><option value="sport">Desporto</option><option value="thriller">Suspense</option><option value="war">Guerra</option><option value="western">Western</option></select>-->
+			<input name="buscar" type="submit" value="Search">
+		</form>
+	</div>
+  <div id="tabbar">
+	<div><a href="#movies-result" class="ativo">Filmes</a><a href="#series-result">Séries</a></div>
+  </div>
+  <div id="content">
+	<div id="movies-result">
+		
+	</div>
+	<div id="series-result">
+		
+	</div>
+  </div>
+  <div id="footer">
+	<p>&lt;wintermute@hacker.pro.br&gt;</p>
+  </div>
+</body>
+</html>

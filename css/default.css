@@ -1,0 +1,200 @@
+@font-face {
+	font-family: 'Proxima Nova Light';
+	src: url(../fonts/proxima-nova-light.eot);
+	src: url(../fonts/proxima-nova-light.svg#proxima_nova_ltlight) format('svg'), url(../fonts/proxima-nova-light.woff) format('woff'), url(../fonts/proxima-nova-light.ttf) format('truetype'), url(../fonts/proxima-nova-light.eot?#iefix) format('embedded-opentype');
+	font-weight: 400;
+	font-style: normal
+}
+
+@font-face {
+	font-family: 'Proxima Nova Semibold';
+	src: url(../fonts/proxima-nova-semibold.eot);
+	src: url(../fonts/proxima-nova-semibold.svg#proxima_nova_ltsemibold) format('svg'), url(../fonts/proxima-nova-semibold.eot?#iefix) format('embedded-opentype'), url(../fonts/proxima-nova-semibold.woff) format('woff'), url(../fonts/proxima-nova-semibold.ttf) format('truetype');
+	font-weight: 400;
+	font-style: normal
+}
+
+@font-face {
+	font-family: 'Proxima Nova Bold';
+	src: url(../fonts/proxima-nova-bold.eot);
+	src: url(../fonts/proxima-nova-bold.svg#proxima_nova_rgbold) format('svg'), url(../fonts/proxima-nova-bold.eot?#iefix) format('embedded-opentype'), url(../fonts/proxima-nova-bold.woff) format('woff'), url(../fonts/proxima-nova-bold.ttf) format('truetype');
+	font-weight: 400;
+	font-style: normal
+}
+
+
+	* {
+		margin: 0px;
+		padding: 0px;
+		border: none;
+	}
+	h2 {
+		font-size: 18px;
+	}
+	form {
+		width: 490px;
+		margin: auto;
+	}
+	a.api_detail {
+		display: flex;
+		display: -webkit-flex;
+		display: -moz-box;
+		background-color: rgba(27, 34, 42, 0);
+		color: #fff;
+		text-decoration: none;
+		margin: -10px;
+		padding: 10px;
+		height: 100%;
+		width: 100%;
+	}
+	a.api_detail:hover {
+		background-color: rgba(27, 34, 42, 0.71);
+	}
+	a.api_detail {
+		transition: background-color 0.5s;
+	}
+	a.api_detail > h2 {
+		display: none;
+		position: absolute;
+		background-color: rgba(27, 34, 42, 0.8);
+		padding: 5px;
+		max-width: 200px;
+	}
+	.previnfo {
+		width: 100%;
+		height: 100%;
+	}
+	#content {
+		background-color: #203041;
+		font-family: 'Proxima Nova Light';
+		color: #fff;
+	}
+	#content > h1 {
+		margin-top: 30px;
+		font-size: 36px;
+		line-height: 48px;
+		text-align: center;
+	}
+	#tabbar {
+		background-color: #1b222a;
+		text-align: center;
+		display: none;
+	}
+	#tabbar > div {
+		
+	}
+	#tabbar > div > a {
+		background-color: #1b2836;
+		font-family: 'Proxima Nova Light';
+		text-decoration: none;
+		display: inline-block;
+		padding: 10px;
+		padding-left: 20px;
+		padding-right: 20px;
+		border-top-right-radius: 5px;
+		border-top-left-radius: 5px;
+		color: #fff;
+	}
+	#tabbar > div > a.ativo {
+		background-color: #e94b35;
+	}
+	#popup {
+		display: none;
+		background-color: rgba(27, 34, 42, 0.8);
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		z-index: 100;
+		transition: all ease 0.5s;
+		font-family: "Proxima Nova Light";
+	}
+	#popup > div {
+		background-color: #f7f7f7;
+		margin: auto;
+		width: 80%;
+		max-height: 80%;
+		z-index: 102;
+		position: fixed;
+		top: 10%;
+		left: 50%;
+		margin-left: -40%;
+		transition: all ease 1s;
+		overflow: scroll;
+	}
+	#popup > div > h2, #popup > div > p {
+		margin: 20px;
+	}
+	#popup > div > h2 {
+		font-family: "Proxima Nova Semibold";
+	}
+	body, #search, #footer {
+		background-color: #1b222a;
+	}
+	#movies-result, #series-result {
+		text-align: center;
+		border-top: 3px solid #e94b35;
+	}
+	#series-result {
+		display: none;
+	}
+	#movies-result > div.cover, #series-result > div.cover {
+		background-color: #f7f7f7;
+		height: 325px;
+		width: 210px;
+		margin: 10px;
+		display: inline-block;
+		padding: 10px;
+	}
+	#movies-result > div.cover:hover, #series-result > div.cover:hover {
+		
+	}
+	#footer {
+		color: #f7f7f7;
+		font-size: 12px;
+		font-family: "Proxima Nova Light";
+		text-align: center;
+		padding: 20px;
+		border-top: 3px solid #e94b35;
+	}
+	input[name=query_term] {
+		border: none;
+		padding: 16px;
+		background: #fff;
+		min-width: 400px;
+		border-radius: 3px;
+		font-family: "Proxima Nova Light";
+		font-size: 19px;
+		height: 53px;
+	}
+	input[name=query_term]:focus {
+		outline: 0
+	}
+	
+	input[type=submit] {
+		border: none;
+		padding: 16px;
+		background: #e94b35;
+		color: #fff;
+		font-family: 'Proxima Nova Semibold';
+		font-size: 19px;
+		border-radius: 3px;
+		margin-left: -10px;
+		border-bottom-left-radius: 0;
+		border-top-left-radius: 0;
+		transition: background-color ease .2s;
+	}
+	
+	input[type=submit]:focus {
+		outline: 0
+	}
+	
+	input[type=submit]:hover {
+		background-color: #e6341b
+	}
+	
+	input[type=submit]:active {
+		background-color: #ce2d16
+	}
+	#search {
+		padding: 35px;
+	}

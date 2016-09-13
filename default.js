@@ -95,7 +95,7 @@ $(document).ready(function() {
       $.each(data["torrents"], function(key, val) {
         var magnet = "magnet:?xt=urn:btih:" + val["hash"] + "&dn=" + data["title_long"] + trackers;
         popup.append("<p><a class='magnet-link' href='" + magnet + "'>Download (" + val["quality"] + ")</a></p>");
-				popup.append("<div class=\"torrentsTime\" data-setup=\"{\"source\": \""+ magnet +"\", \"imdbid\": \""+ data["imdb_code"] + "\"}\"></div>");
+				popup.append("<div class=\"torrentsTime\" data-setup=\'{\"source\": \""+ magnet +"\", \"imdbid\": \""+ data["imdb_code"] + "\"}\'></div>");
 				})
       });
     return false;

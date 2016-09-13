@@ -62,7 +62,6 @@ $(document).ready(function() {
     });
   }
 
-	function loadTorrent(magnet) {
 		var client = new WebTorrent()
 
 var torrentId = 'magnet:?xt=urn:btih:6a9759bffd5c0af65319979fb7832189f4f3c35d&dn=sintel.mp4&tr=wss%3A%2F%2Ftracker.btorrent.xyz&tr=wss%3A%2F%2Ftracker.fastcast.nz&tr=wss%3A%2F%2Ftracker.openwebtorrent.com&tr=wss%3A%2F%2Ftracker.webtorrent.io&ws=https%3A%2F%2Fwebtorrent.io%2Ftorrents%2Fsintel-1024-surround.mp4'
@@ -71,7 +70,6 @@ client.add(torrentId, function (torrent) {
   var file = torrent.files[0]
   file.appendTo('body') // append the file to the DOM
 })
-	}
 
   //
   //$("#tabbar").show();
@@ -105,7 +103,6 @@ client.add(torrentId, function (torrent) {
       $.each(data["torrents"], function(key, val) {
         var magnet = "magnet:?xt=urn:btih:" + val["hash"] + "&dn=" + data["title_long"] + trackers
         popup.append("<p><a class='magnet-link' href='" + magnet + "'>Download (" + val["quality"] + ")</a></p>")
-				loadTorrent(magnet);
       });
     });
     return false;

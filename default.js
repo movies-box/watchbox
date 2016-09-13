@@ -62,14 +62,14 @@ $(document).ready(function() {
     });
   }
 
-	function loadTorrent(magnet, element) {
+	function loadTorrent(magnet) {
 		var client = new WebTorrent();
 
 		client.add(magnet, function (torrent) {
 // Torrents can contain many files. Let's use the first.
 			var file = torrent.files[0];
 // Display the file by adding it to the DOM. Supports video, audio, image, etc. files
-			element.append(file);
+			file.appendTo("#popup")
 		});
 	}
 
@@ -105,7 +105,7 @@ $(document).ready(function() {
       $.each(data["torrents"], function(key, val) {
         var magnet = "magnet:?xt=urn:btih:" + val["hash"] + "&dn=" + data["title_long"] + trackers
         //popup.append("<p><a class='magnet-link' href='" + magnet + "'>Download (" + val["quality"] + ")</a></p>")
-				loadTorrent(magnet, popup);
+				loadTorrent(magnet);
 				alert("dd");
       });
     });

@@ -110,8 +110,9 @@ $(document).ready(function() {
     return false;
   });
 
-	$("#popup").on('click', 'div > p > a.magnet-link', function(e) {
+	$("#popup > div > p").on('click', '.magnet-link', function(e) {
 		loadTorrent($(this).attr('href'), "#popup");
+		alert("dd");
 	});
 
   $("#series-result").on("click", ".api_detail", function(e) {

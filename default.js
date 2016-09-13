@@ -110,7 +110,7 @@ $(document).ready(function() {
     return false;
   });
 
-	$("#popup").on('click', '.magnet-link', function(e) {
+	$("#popup").on('click', 'div > p > a.magnet-link', function(e) {
 		loadTorrent($(this).attr('href'), "#popup");
 	});
 

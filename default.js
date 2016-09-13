@@ -9,7 +9,7 @@ $(document).ready(function() {
 	  $(this).css("display", "none");
   });
   $("#popup").on("click", "div", function() {
-  	  return false;
+  	  //return false;
   });
 
   $("#tabbar > div > a").click(function() {

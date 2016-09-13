@@ -62,6 +62,17 @@ $(document).ready(function() {
     });
   }
 
+	function loadTorrent(magnet, element) {
+		var client = new WebTorrent();
+
+		client.add(magnet, function (torrent) {
+// Torrents can contain many files. Let's use the first.
+			var file = torrent.files[0];
+// Display the file by adding it to the DOM. Supports video, audio, image, etc. files
+			$(element).html(file);
+		});
+	}
+
   //
   //$("#tabbar").show();
   $("#popup").hide();
@@ -93,11 +104,15 @@ $(document).ready(function() {
       var trackers = "&tr=http://9.rarbg.com:2710/announce&tr=http://announce.torrentsmd.com:6969/announce&tr=http://bt.careland.com.cn:6969/announce&tr=http://explodie.org:6969/announce&tr=http://mgtracker.org:2710/announce&tr=http://tracker.best-torrents.net:6969/announce&tr=http://tracker.tfile.me/announce&tr=http://tracker.torrenty.org:6969/announce&tr=http://tracker1.wasabii.com.tw:6969/announce&tr=udp://9.rarbg.com:2710/announce&tr=udp://9.rarbg.me:2710/announce&tr=udp://coppersurfer.tk:6969/announce&tr=udp://exodus.desync.com:6969/announce&tr=udp://open.demonii.com:1337/announce&tr=udp://tracker.btzoo.eu:80/announce&tr=udp://tracker.istole.it:80/announce&tr=udp://tracker.openbittorrent.com:80/announce&tr=udp://tracker.prq.to/announce&tr=udp://tracker.publicbt.com:80/announce"
       $.each(data["torrents"], function(key, val) {
         var magnet = "magnet:?xt=urn:btih:" + val["hash"] + "&dn=" + data["title_long"] + trackers
-        popup.append("<p><a href='" + magnet + "'>Download (" + val["quality"] + ")</a></p>")
+        popup.append("<p><a class='magnet-link' href='" + magnet + "'>Download (" + val["quality"] + ")</a></p>")
       });
     });
     return false;
   });
+
+	$("#popup").on('click', '.magnet-link', function(e) {
+		loadTorrent($(this).attr('href'), "#popup");
+	});
 
   $("#series-result").on("click", ".api_detail", function(e) {
     e.preventDefault();

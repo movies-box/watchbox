@@ -98,7 +98,6 @@ $(document).ready(function() {
 				popup.append('<div class="torrentsTime" data-setup="{"source": "'+ magnet +'", "imdbid": "'+ data["imdb_code"] +'"}"></div>');
 				})
       });
-    });
     return false;
   });
 

@@ -96,7 +96,7 @@ $(document).ready(function() {
         var magnet = "magnet:?xt=urn:btih:" + val["hash"] + "&dn=" + data["title_long"] + trackers;
 				var imdbid = data["imdb_code"];
         popup.append("<p><a class='magnet-link' href='" + magnet + "'>Download (" + val["quality"] + ")</a></p>");
-				$("body").append("<div class=\"torrentsTime\" data-setup=\'{\"source\": \""+ magnet +"\", \"imdbid\": \""+ data["imdb_code"] + "\", \"videoPlayer\": \"true\"}\'></div>");
+				popup.append('<iframe src="https://embed.torrents-time.com/#source='+magnet+'&imdb='+imdbid+'"></iframe>');
 				})
       });
     return false;

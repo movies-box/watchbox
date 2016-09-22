@@ -96,7 +96,7 @@ $(document).ready(function() {
         var magnet = val["url"];
 				var imdbid = data["imdb_code"];
         popup.append("<p><a class='magnet-link' href='" + magnet + "'>Download (" + val["quality"] + ")</a></p>");
-				popup.append('<div class=\"torrentsTime\" data-setup=\'{\"source\": \"' +magnet+ '", \"title\": \"VideoName\", \"imdbid\": \"'+ imdbid +'\"}\'></div>');
+				popup.append('<div class="torrentsTime" data-setup=\'{"source": "' +magnet+ '", "title": "VideoName", "imdbid": "'+ imdbid +'"}\'></div>');
 				})
       });
     return false;

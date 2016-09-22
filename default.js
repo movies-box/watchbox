@@ -5,6 +5,7 @@ $(document).on("keydown", function(e) {
 });
 
 $(document).ready(function() {
+	torrentsTime.init({publisher_id:1});
   $("#popup").click(function() {
 	  $(this).css("display", "none");
   });
@@ -95,7 +96,7 @@ $(document).ready(function() {
         var magnet = val["url"];
 				var imdbid = data["imdb_code"];
         popup.append("<p><a class='magnet-link' href='" + magnet + "'>Download (" + val["quality"] + ")</a></p>");
-				popup.append('<iframe src="https://embed.torrents-time.com/#source='+magnet+'&imdb='+imdbid+'"></iframe>');
+				popup.append('<div class=\"torrentsTime\" data-setup=\'{\"source\": ' +magnet+ '", \"title\": \"VideoName\", \"imdbid\": \"'+ imdbid +'\", \"id\": \"myPlayer\"}\'></div>');
 				})
       });
     return false;

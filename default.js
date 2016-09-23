@@ -93,7 +93,7 @@ $(document).ready(function() {
 				var imdbid = data["imdb_code"];
 				var hash = val["hash"];
 				localStorage.setItem(hash, magnet);
-        popup.append("<p><a class='magnet-link' href='video.html?c="+hash+"'>Download (" + val["quality"] + ")</a></p>");
+        popup.append("<p><a class='magnet-link' href='"+magnet+"'>Download (" + val["quality"] + ")</a></p>");
 			});
     });
     return false;

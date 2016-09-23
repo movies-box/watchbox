@@ -92,8 +92,19 @@ $(document).ready(function() {
         var magnet = "magnet:?xt=urn:btih:" + val["hash"] + "&dn=" + data["title_long"] + trackers;
 				var imdbid = data["imdb_code"];
         popup.append("<p><a class='magnet-link' href='" + magnet + "'>Download (" + val["quality"] + ")</a></p>");
-				})
-      });
+
+				var client = new WebTorrent();
+
+			client.add(magnet, function (torrent) {
+			// Torrents can contain many files. Let's use the first.
+			var file = torrent.files[0];
+
+			// Display the file by adding it to the DOM. Supports video, audio, image, etc. files
+					file.appendTo('#popup');
+				});
+
+			});
+    });
     return false;
   });
 

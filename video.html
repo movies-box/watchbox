@@ -20,10 +20,10 @@
       }
 
       var client = new WebTorrent();
-      var magnet = GetURLParameter('m');
-      var titulo = GetURLParameter('dn');
+      var hash = GetURLParameter('c');
+      var magnet = localStorage.getItem(hash);
 
-
+console.log(magnet);
 
       client.add(magnet, function (torrent) {
         // Torrents can contain many files. Let's use the first.

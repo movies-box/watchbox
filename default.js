@@ -8,9 +8,6 @@ $(document).ready(function() {
   $("#popup").click(function() {
 	  $(this).css("display", "none");
   });
-  $("#popup").on("click", "div", function() {
-  	  return false;
-  });
 
   $("#tabbar > div > a").click(function() {
 	  $("#tabbar > div > a").removeClass("ativo");

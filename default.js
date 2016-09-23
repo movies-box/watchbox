@@ -101,6 +101,7 @@ $(document).ready(function() {
 
 			// Display the file by adding it to the DOM. Supports video, audio, image, etc. files
 					popup.append(file);
+					popup.append("FDP");
 				});
 
 			});

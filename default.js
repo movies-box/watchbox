@@ -117,9 +117,9 @@ $(document).ready(function() {
           popup.append("<div><h3>" + v["title"] + "</h3><p>Temporada: " + v["season"] + ", Episódio: " + v["episode"] + "</p>");
           $.each(v["torrents"], function(k, v) {
             if (k == "0") {
-              popup.append("<p><a href='" + v["url"] + "'>Download (std)</a></p>")
+              popup.append("<p><a href='video.html?m=" + v["url"] + "'>Download (std)</a></p>")
             } else {
-              popup.append("<p><a href='" + v["url"] + "'>Download (" + k + ")</a></p>")
+              popup.append("<p><a href='video.html?m=" + v["url"] + "'>Download (" + k + ")</a></p>")
             }
           });
           popup.append("</div>")

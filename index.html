@@ -5,7 +5,22 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
 	<link href="css/default.css" rel="stylesheet" type="text/css" media="screen">
 	<script src="jquery-2.1.3.min.js"></script>
+	<script src="webtorrent.min.js"></script>
 	<script src="default.js"></script>
+
+	<script type="text/javascript">
+	var client = new WebTorrent()
+
+var torrentId = 'magnet:?xt=urn:btih:6a9759bffd5c0af65319979fb7832189f4f3c35d&dn=sintel.mp4&tr=wss%3A%2F%2Ftracker.btorrent.xyz&tr=wss%3A%2F%2Ftracker.fastcast.nz&tr=wss%3A%2F%2Ftracker.openwebtorrent.com&tr=wss%3A%2F%2Ftracker.webtorrent.io&ws=https%3A%2F%2Fwebtorrent.io%2Ftorrents%2Fsintel-1024-surround.mp4'
+
+client.add(torrentId, function (torrent) {
+// Torrents can contain many files. Let's use the first.
+var file = torrent.files[0]
+
+// Display the file by adding it to the DOM. Supports video, audio, image, etc. files
+file.appendTo('body')
+})
+	</script>
 
 </head>
 <body>
